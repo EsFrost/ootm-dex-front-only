@@ -31,7 +31,7 @@ const SearchBar = ({ onSearch, inputClass, buttonClass, containerClass, setSearc
           const data = await response.json()
           onSearch(data)
         } else {
-          const response = await fetch(`http:///192.168.1.123:3001/monsters/search/${cleanInput}`, {
+          const response = await fetch(`https://sigmafi-tech.website/ootm-dex/monsters/search/${cleanInput}`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ const SearchBar = ({ onSearch, inputClass, buttonClass, containerClass, setSearc
     const cleanInput = sanitizeInput(searchQuery)
     if (cleanInput === '') {
       try {
-        const response = await fetch('http:///192.168.1.123:3001/monsters', {
+        const response = await fetch('https://sigmafi-tech.website/ootm-dex/monsters', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ const SearchBar = ({ onSearch, inputClass, buttonClass, containerClass, setSearc
       }
     } else {
       try {
-        const response = await fetch(`http:///192.168.1.123:3001/monsters/search/${cleanInput}`, {
+        const response = await fetch(`https://sigmafi-tech.website/ootm-dex/monsters/search/${cleanInput}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
