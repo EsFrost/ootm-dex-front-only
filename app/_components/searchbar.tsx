@@ -22,7 +22,7 @@ const SearchBar = ({ onSearch, inputClass, buttonClass, containerClass, setSearc
       const cleanInput = sanitizeInput(searchQuery)
       try {
         if (cleanInput === '') {
-          const response = await fetch('http:///192.168.1.123:3001/monsters', {
+          const response = await fetch('https://sigmafi-tech.website/ootm-dex/monsters', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
